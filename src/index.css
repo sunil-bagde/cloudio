@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --sidebar-bg-color: #343a51;
+    --white: #ffffff;
+
+    --link-text-color: #cdced4;
+    --heading-text-color: #42485e;
+    --sub-heading-text-color: #52576a;
+    --sub-1-heading-text-color: #a3a9c9;
+    --main-bg-color: #f5f6fb;
+    --primary-orange: #ffa000;
+    --sec-orange: #ffc568;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    //font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.container {
+    display: grid;
+    grid-template-columns: 18rem 2fr 18rem;
+    grid-gap: 4rem;
+}
+.sidebar {
+    background-color: var(--sidebar-bg-color);
+}
+.main {
+    background-color: var(--main-bg-color);
+}
+.right {
+    background-color: var(--main-bg-color);
+}
+
+/* 
+Sidebar
+*/
+.logo {
+    margin-top: 60px;
+
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.o-hat {
+    color: var(--primary-orange);
+    font-weight: 900;
+    position: relative;
+}
+.hat-icon {
+    position: absolute;
+    top: -1.2rem;
+    left: 1px;
+}
+.io {
+    color: var(--primary-orange);
+    margin-left: 0.1rem;
+    font-weight: 900;
+}
+
+.side-nav {
+    color: white;
+}
+.side-nav li {
+    display: flex;
+    align-items: flex-start;
+}
+.side-nav li a {
+    font-size: 13px;
+    padding-left: 20px;
+    color: #767c8d;
+}
+.side-nav li svg {
+    color: #797f90;
+}
+.side-nav .active svg {
+    color: white;
+}
+
+.side-nav .active {
+    color: white;
+}
+.w-6,
+.h-6 {
+    height: 20px;
+    width: 20px;
 }
